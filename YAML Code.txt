@@ -1,0 +1,466 @@
+﻿general_details:
+  '#type': wizard_page
+  '#title': 'General Details'
+  name:
+    '#type': name
+    '#title': Name
+    '#required': true
+    '#title__required': true
+    '#first__title': 'First Name'
+    '#first__required': true
+    '#middle__access': false
+    '#last__title': 'Last Name'
+    '#last__required': true
+    '#suffix__access': false
+    '#degree__access': false
+  father_s_name:
+    '#type': name
+    '#title': 'Father''s Name'
+    '#required': true
+    '#title__access': false
+    '#first__title': 'Father''s Name'
+    '#middle__access': false
+    '#last__access': false
+    '#suffix__access': false
+    '#degree__access': false
+  mother_s_name:
+    '#type': name
+    '#title': 'Mother''s Name'
+    '#required': true
+    '#title__access': false
+    '#first__title': 'Mother''s Name'
+    '#middle__access': false
+    '#last__access': false
+    '#suffix__access': false
+    '#degree__access': false
+  date_of_birth:
+    '#type': date
+    '#title': 'Date of Birth'
+    '#required': true
+    '#date_date_max': '-216 months'
+  gender:
+    '#type': radios
+    '#title': Gender
+    '#options':
+      Male: Male
+      Female: Female
+      Other: Other
+    '#required': true
+contactd:
+  '#type': wizard_page
+  '#title': 'Contact Details'
+  '#open': true
+  address:
+    '#type': address
+    '#title': address
+    '#address__placeholder': 'street address/village'
+    '#address__required': true
+    '#address_2__title': Address
+    '#address_2__placeholder': 'apartment/Unit#/block'
+    '#address_2__required': true
+    '#city__title': City/Village
+    '#city__required': true
+    '#state_province__title': District
+    '#state_province__required': true
+    '#state_province__type': textfield
+    '#postal_code__title': State
+    '#postal_code__required': true
+    '#country__title': 'Pin Code'
+    '#country__required': true
+    '#country__type': textfield
+    '#required': true
+  mobile_no:
+    '#type': tel
+    '#title': 'Mobile No.'
+    '#size': '10'
+    '#international': true
+    '#international_initial_country': IN
+    '#required': true
+  email:
+    '#type': email
+    '#title': Email
+    '#required': true
+  alternate_contact_:
+    '#type': tel
+    '#title': 'Alternate Contact:'
+    '#international': true
+    '#international_initial_country': IN
+  aadhar_number:
+    '#type': number
+    '#title': 'Aadhar Number'
+    '#minlength': '10'
+    '#maxlength': '10'
+    '#required': true
+  educational_professional_qualifications:
+    '#type': select_other
+    '#title': 'Educational/Professional Qualifications'
+    '#options':
+      'High School': 'High School'
+      'Under Graduate': 'Under Graduate'
+      Graduate: Graduate
+      'Post Graduate': 'Post Graduate'
+      MBBS: MBBS
+      'Public Health': 'Public Health'
+      Nursing: Nursing
+year_of_rc_training:
+  '#type': wizard_page
+  '#title': 'Year of RC Training'
+  year_of_rc_training_if_done_any_:
+    '#type': checkboxes
+    '#title': 'Year of RC Training (if done any)'
+    '#options':
+      serv_master_trainer: 'SERV Master Trainer'
+      serv_instructor: 'SERV Instructor'
+      serv_volunteer: 'SERV Volunteer'
+      first_aid_tot: 'First Aid Tot'
+      first_aid_basic: 'First Aid Basic'
+      first_aid_refresher: 'First Aid Refresher'
+      ndrt_basic: 'NDRT Basic'
+      ndrt_refresher: 'NDRT Refresher'
+      ddrt_basic: 'DDRT Basic'
+      ddrt_refresher: 'DDRT Refresher'
+      sdrt_basic: 'SDRT Basic'
+      sdrt_refresher: 'SDRT Refresher'
+      ndwrt_basic: 'NDWRT Basic'
+      ndwrt_refresher: 'NDWRT Refresher'
+      ndrt_logistics: 'NDRT Logistics'
+    '#options_display': three_columns
+  year_of_serv_master_trainer:
+    '#type': select
+    '#title': 'Year of SERV Master Trainer'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[serv_master_trainer]"]':
+          checked: true
+    '#required': true
+  year_of_serv_instructor:
+    '#type': select
+    '#title': 'Year of SERV Instructor'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[serv_instructor]"]':
+          checked: true
+    '#required': true
+  year_of_serv_volunteer:
+    '#type': select
+    '#title': 'Year of SERV Volunteer'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[serv_volunteer]"]':
+          checked: true
+    '#required': true
+  year_of_first_aid_tot:
+    '#type': select
+    '#title': 'Year of First Aid ToT'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[first_aid_tot]"]':
+          checked: true
+    '#required': true
+  year_of_first_aid_basic:
+    '#type': select
+    '#title': 'Year of First Aid Basic'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[first_aid_basic]"]':
+          checked: true
+    '#required': true
+  year_of_first_aid_refresher:
+    '#type': select
+    '#title': 'Year of First Aid Refresher'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[first_aid_refresher]"]':
+          checked: true
+    '#required': true
+  year_of_ndrt_basic:
+    '#type': select
+    '#title': 'Year of NDRT Basic'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[ndrt_basic]"]':
+          checked: true
+    '#required': true
+  year_of_ndrt_refresher:
+    '#type': select
+    '#title': 'Year of NDRT Refresher'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[ndrt_refresher]"]':
+          checked: true
+    '#required': true
+  year_of_ddrt_basic:
+    '#type': select
+    '#title': 'Year of DDRT Basic'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[ddrt_basic]"]':
+          checked: true
+    '#required': true
+  year_of_ddrt_refresher:
+    '#type': select
+    '#title': 'Year of DDRT Refresher'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[ddrt_refresher]"]':
+          checked: true
+    '#required': true
+  year_of_sdrt_basic:
+    '#type': select
+    '#title': 'Year of SDRT Basic'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[sdrt_basic]"]':
+          checked: true
+    '#required': true
+  year_of_sdrt_refresher:
+    '#type': select
+    '#title': 'Year of SDRT Refresher'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[sdrt_refresher]"]':
+          checked: true
+    '#required': true
+  year_of_ndwrt_basic:
+    '#type': select
+    '#title': 'Year of NDWRT Basic'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[ndwrt_basic]"]':
+          checked: true
+    '#required': true
+  year_of_ndwrt_refresher:
+    '#type': select
+    '#title': 'Year of NDWRT Refresher'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[ndwrt_refresher]"]':
+          checked: true
+    '#required': true
+  year_of_ndrt_logistics:
+    '#type': select
+    '#title': 'Year of NDRT Logistics'
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+    '#states':
+      visible-slide:
+        ':input[name="year_of_rc_training_if_done_any_[ndrt_logistics]"]':
+          checked: true
+    '#required': true
+
+
+what_kind_of_organization_is_this_:
+  '#type': wizard_page
+  '#title': 'Type of Organization'
+  '#open': true
+  select_only_one:
+    '#type': radios
+    '#title': 'Select only one'
+    '#options':
+      'Government/public service agency': 'Government/public service agency'
+      'International/ local NGO/ CBO': 'International/ local NGO/ CBO'
+      'Foundation/think tank/ academia': 'Foundation/think tank/ academia'
+      'Independent Consultant': 'Independent Consultant'
+      'Private sector company': 'Private sector company'
+      'Media Organization': 'Media Organization'
+      'Programme or project': 'Programme or project'
+      Association: Association
+      'Multi or bilateral organization': 'Multi or bilateral organization'
+      'UN/intergovernmental organization': 'UN/intergovernmental organization'
+      Student: Student
+      Others: Others
+    '#unique': true
+    '#unique_user': true
+    '#unique_error': 'You have to select one field only'
+volunteering_details:
+  '#type': wizard_page
+  '#title': 'Volunteering Details'
+  intervention_areas_you_are_interested_in_to_contribute_:
+    '#type': label
+    '#title': 'Intervention areas you are interested in to contribute '
+    '#description': '<span lang="EN-US" style="font-size:9.5pt"><span style="font-family:&quot;Arial&quot;,sans-serif">you are free to choose multiple areas</span></span>'
+    '#required': true
+  assist_in_conducting_blood_motivation_camps:
+    '#type': checkbox
+    '#title': 'Assist in conducting blood motivation camps'
+  0assist_in_conducting_blood_donation_camps:
+    '#type': checkbox
+    '#title': 'Assist in conducting blood donation camps'
+  assist_in_disaster_relief_activities:
+    '#type': checkbox
+    '#title': 'Assist in disaster relief activities'
+  assist_in_education_programmes:
+    '#type': checkbox
+    '#title': 'Assist in education programmes'
+  assist_in_health_programmes:
+    '#type': checkbox
+    '#title': 'Assist in health programmes'
+  assist_in_livelihood_programmes:
+    '#type': checkbox
+    '#title': 'Assist in livelihood programmes'
+  assist_in_volunteer_motivation_programmes_in_schools_colleges:
+    '#type': checkbox
+    '#title': 'Assist in volunteer motivation programmes in schools & colleges'
+  assist_in_fund_raising:
+    '#type': checkbox
+    '#title': 'Assist in fund raising'
+  0work_as_peer_educators_on_health_hygiene:
+    '#type': checkbox
+    '#title': 'Work as peer educators on health & hygiene'
+  work_as_peer_educators_on_health_hygiene:
+    '#type': checkbox
+    '#title': 'Assist in activities of JRC/YRC'
+  assist_in_day_to_day_activities_of_red_cross_state_and_district_:
+    '#type': checkbox
+    '#title': 'Assist in day-to-day activities of Red Cross state and district branches'
+  online_volunteering:
+    '#type': checkbox
+    '#title': 'Online Volunteering'
+  details_of_previous_engagement_with_redcorss_multiple_trainings:
+    '#type': textfield
+    '#title': 'Details of previous engagement with Redcorss/ Multiple trainings'
+  _may_we_contact_in_time_of_emergency_through_sms_or_emails_:
+    '#type': radios
+    '#title': ' May we contact in time of emergency through SMS or Emails?'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+  _do_you_allow_to_share_your_data_with_red_cross_partners_or_gove:
+    '#type': radios
+    '#title': ' Do you allow to share your data with Red Cross Partners or Government agencies?'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+    '#required': true
+: Humanity, Unity, Impartiality, Neutrality, Independence, Universality and Voluntary Service) with full dedication, compassion, commitment, transparently without aspiring for any personal benefits to relieve suffering of community whenever, wherever in possible way in true sp  type_of_volunteer:
+    '#type': label
+    '#title': 'Type of Volunteer'
+  serv_social_and_amp_emergency_response_volunteer_fmr:
+    '#type': checkbox
+    '#title': 'SERV - Social and amp ; Emergency Response Volunteer/FMR'
+  sdrt_state_disaster_response_team:
+    '#type': checkbox
+    '#title': 'SDRT - State Disaster Response Team'
+  ndwrt_national_disaster_water_and_amp_sanitation_response_team:
+    '#type': checkbox
+    '#title': 'NDWRT - National Disaster Water And amp; Sanitation response Team'
+  jrc_junior_red_cross:
+    '#type': checkbox
+    '#title': 'JRC - Junior Red Cross'
+  basic_first_aid_volunteer:
+    '#type': checkbox
+    '#title': 'Basic First Aid Volunteer'
+  ndrt_national_disaster_response_team:
+    '#type': checkbox
+    '#title': 'NDRT - National Disaster Response Team'
+  ddrt_district_disaster_response_team:
+    '#type': checkbox
+    '#title': 'DDRT - District Disaster Response Team'
+  yrc_youth_red_cross:
+    '#type': checkbox
+    '#title': 'YRC - Youth Red Cross'
+  cv_commmunity_volunteer:
+    '#type': checkbox
+    '#title': 'CV - Commmunity Volunteer'
+  first_aid_lay_lecturer:
+    '#type': checkbox
+    '#title': 'First Aid - Lay Lecturer'
+  state_branch_for_which_you_are_already_a_volunteer_or_would_like:
+    '#type': textarea
+    '#title': 'State Branch for which you are already a volunteer or would like to be a volunteer :'
+  if_you_have_selected_a_district_to_work_in_name_of_district_:
+    '#type': textarea
+    '#title': 'If you have selected a district to work in, name of district : '
+disclaimer:
+  '#type': wizard_page
+  '#title': 'Disclaimer and Signature'
+  i_hereby_pledge_to_render_my_honorary_humanitarian_services_adhe:
+    '#type': checkbox
+    '#title': 'I hereby pledge to render my honorary humanitarian services adhering (to seven Red Cross principles namelyirit of Red Cross movement.'
+    '#required': true
+  signature_your_name_:
+    '#type': textfield
+    '#title': 'Signature (Your name)'
+    '#required': true
+  date_:
+    '#type': date
+    '#title': 'Date:'
+    '#required': true
+    '#datepicker': true
+    '#datepicker_button': true
+  place:
+    '#type': textfield
+    '#title': Place
